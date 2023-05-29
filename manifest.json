@@ -7,14 +7,18 @@
         "48": "icon.png",
         "128": "icon.png"
     },
+    "permissions": ["tabs", "activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [
         {
             "css": ["style.css"],
-            "js": ["content.js"],
             "matches": [
                 "https://developer.chrome.com/docs/extensions/*",
                 "https://developer.chrome.com/docs/webstore/*"
             ]
         }
-    ]
+    ],
+    "action": {}
 }
